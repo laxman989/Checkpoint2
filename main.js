@@ -62,12 +62,22 @@ const services = [
 ]
 
 function handleFormSubmit() {
+    console.log(Date.now().toLocaleString());
+    console.log(startDate.value);
     if(!whereTo.value || !persons.value || !startDate.value || !endDate.value || !description.value) {
         alert("Error: Please enter value in all the fields.")
         return
     }
     if(persons.value < 1) {
         alert("Error: Please add at least one person.");
+        return
+    }
+    if(startDate.value < Date.now()) {
+        alert("Error: Start Date cannot be in the past.");
+        return
+    }
+    if(endDate.value < Date.now()) {
+        alert("Error: End Date cannot be cannot be in the past.");
         return
     }
     if(startDate.value > endDate.value) {
