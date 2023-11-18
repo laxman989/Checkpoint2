@@ -74,32 +74,47 @@
 
         <div class="form-section">
             <form id="bookingForm">
+              <div class="inputElementGrp">
                 <label for="whereTo">Where to:</label>
                 <select id="whereTo" name="whereTo">
-                    <option value="">Select Country to Visit</option>
-                    <option value="japan">Japan</option>
-                    <option value="unitedStates">United States</option>
-                    <option value="india">India</option>
-                    <option value="italy">Italy</option>
-                    <option value="germany">Germany</option>
-                    <option value="singapore">Singapore</option>
-                    <option value="china">China</option>
-                    <option value="indonesia">Indonesia</option>
-                    <option value="malaysia">Malaysia</option>
-                    <option value="australia">Australia</option>
+                  <option value="">Select Country to Visit</option>
+                  <option value="japan">Japan</option>
+                  <option value="unitedStates">United States</option>
+                  <option value="india">India</option>
+                  <option value="italy">Italy</option>
+                  <option value="germany">Germany</option>
+                  <option value="singapore">Singapore</option>
+                  <option value="china">China</option>
+                  <option value="indonesia">Indonesia</option>
+                  <option value="malaysia">Malaysia</option>
+                  <option value="australia">Australia</option>
                 </select>
+                <span id="whereToError" class="error"></span>
+              </div>
 
-                <label for="persons">How Many Person:</label>
-                <input type="number" id="persons" name="persons" value="" required>
+                <div class="inputElementGrp">
+                  <label for="persons">How Many Person:</label>
+                  <input type="number" id="persons" name="persons" value="" required>
+                  <span id="personsError" class="error"></span>
+                </div>
 
-                <label for="startDate">Start Date:</label>
-                <input type="date" id="startDate" name="startDate" value="" required>
+                <div class="inputElementGrp">
+                  <label for="startDate">Start Date:</label>
+                  <input type="date" id="startDate" name="startDate" value="" required>
+                  <span id="startDateError" class="error"></span>
+                </div>
 
-                <label for="endDate">End Date:</label>
-                <input type="date" id="endDate" name="endDate" value="" required>
-
-                <label for="description">Description:</label>
-                <textarea id="description" value="" name="description" aria-valuetext="" rows="5" minlength="50" maxlength="500" required></textarea>
+                <div class="inputElementGrp">
+                  <label for="endDate">End Date:</label>
+                  <input type="date" id="endDate" name="endDate" value="" required>
+                  <span id="endDateError" class="error"></span>
+                </div>
+                  
+                <div class="inputElementGrp">
+                  <label for="description">Description:</label>
+                  <textarea id="description" value="" name="description" aria-valuetext="" rows="5" minlength="50" maxlength="500" required></textarea>
+                  <span id="descriptionError" class="error"></span>
+                </div>
 
                 <button id="packageBookingBtn" class="btn btn-warning" type="submit">Book Now</button>
             </form>

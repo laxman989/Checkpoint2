@@ -5,6 +5,15 @@
             box-sizing: border-box;
         }
 
+        .error {
+            color: red;
+            font-size: 13px;
+        }
+        
+        .inputElementGrp {
+            margin-bottom: 15px;
+        }
+
         .navbar {
             width: 100vw;
             height: 10vh;
@@ -107,7 +116,7 @@
 
         .form-section label {
             display: block;
-            margin-bottom: 10px;
+            /* margin-bottom: 10px; */
         }
 
         .form-section select,
@@ -115,7 +124,7 @@
         .form-section textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            /* margin-bottom: 15px; */
             box-sizing: border-box;
         }
 
