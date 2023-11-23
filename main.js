@@ -42,6 +42,13 @@ const packages = [
         price: 300,
         rating: 4.7
     },
+    {
+        image: "https://images.pexels.com/photos/707677/pexels-photo-707677.jpeg?auto=compress&cs=tinysrgb&w=600",
+        title: "India",
+        subTitle: "India is great place to visit.",
+        price: 200,
+        rating: 4.9
+    },
 ]
 
 const services = [
