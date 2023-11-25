@@ -1,25 +1,4 @@
-// package and service section reference.
-const packageSection = document.getElementById('package-section');
-const serviceSection = document.getElementById('services-section');
-const packageBookingBtn = document.getElementById('packageBookingBtn');
-
-// input elements reference.
-const whereTo = document.getElementById('whereTo');
-const persons = document.getElementById('persons');
-const startDate = document.getElementById('startDate');
-const endDate = document.getElementById('endDate');
-const description = document.getElementById('description');
-
-// error elements reference for input fields.
-const whereToError = document.getElementById('whereToError');
-const personsError = document.getElementById('personsError');
-const startDateError = document.getElementById('startDateError');
-const endDateError = document.getElementById('endDateError');
-const descriptionError = document.getElementById('descriptionError');
-
-// booking form reference
-const bookingForm = document.getElementById('bookingForm');
-
+// packages and services array object
 const packages = [
     {
         image: "https://images.pexels.com/photos/2748019/pexels-photo-2748019.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -41,27 +20,6 @@ const packages = [
         subTitle: "Japan is great place to visit.",
         price: 300,
         rating: 4.7
-    },
-    {
-        image: "https://images.pexels.com/photos/707677/pexels-photo-707677.jpeg?auto=compress&cs=tinysrgb&w=600",
-        title: "India",
-        subTitle: "India is great place to visit.",
-        price: 200,
-        rating: 4.9
-    },
-    {
-        image: "https://images.pexels.com/photos/707677/pexels-photo-707677.jpeg?auto=compress&cs=tinysrgb&w=600",
-        title: "India",
-        subTitle: "India is great place to visit.",
-        price: 200,
-        rating: 4.9
-    },
-    {
-        image: "https://images.pexels.com/photos/707677/pexels-photo-707677.jpeg?auto=compress&cs=tinysrgb&w=600",
-        title: "India",
-        subTitle: "India is great place to visit.",
-        price: 200,
-        rating: 4.9
     },
 ]
 
@@ -91,6 +49,28 @@ const services = [
         description: "Wellness retreats and spa for relaxation and rejuvenation"
     },
 ]
+
+// package and service section reference.
+const packageSection = document.getElementById('package-section');
+const serviceSection = document.getElementById('services-section');
+const packageBookingBtn = document.getElementById('packageBookingBtn');
+
+// input elements reference.
+const whereTo = document.getElementById('whereTo');
+const persons = document.getElementById('persons');
+const startDate = document.getElementById('startDate');
+const endDate = document.getElementById('endDate');
+const description = document.getElementById('description');
+
+// error elements reference for input fields.
+const whereToError = document.getElementById('whereToError');
+const personsError = document.getElementById('personsError');
+const startDateError = document.getElementById('startDateError');
+const endDateError = document.getElementById('endDateError');
+const descriptionError = document.getElementById('descriptionError');
+
+// booking form reference
+const bookingForm = document.getElementById('bookingForm');
 
 // functions to validate the form input fields.
 function validateNotEmpty(value, errorElement, errorMessage) {
