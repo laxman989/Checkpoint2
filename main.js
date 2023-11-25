@@ -5,21 +5,63 @@ const packages = [
         title: "Italy",
         subTitle: "Italy is great place to visit.",
         price: 300,
-        rating: 4.7
+        rating: 3.7
     },
     {
         image: "https://images.pexels.com/photos/777059/pexels-photo-777059.jpeg?auto=compress&cs=tinysrgb&w=600",
         title: "Singapore",
         subTitle: "Singapore is great place to visit.",
-        price: 200,
-        rating: 4.9
+        price: 260,
+        rating: 2.2
     },
     {
         image: "https://images.pexels.com/photos/707677/pexels-photo-707677.jpeg?auto=compress&cs=tinysrgb&w=600",
         title: "Japan",
         subTitle: "Japan is great place to visit.",
-        price: 300,
+        price: 190,
+        rating: 4.2
+    },
+    {
+        image: "https://images.pexels.com/photos/789750/pexels-photo-789750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        title: "India",
+        subTitle: "India is great place to visit.",
+        price: 200,
+        rating: 4.9
+    },
+    {
+        image: "https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        title: "Australia",
+        subTitle: "Australia is great place to visit.",
+        price: 360,
         rating: 4.7
+    },
+    {
+        image: "https://images.pexels.com/photos/94420/pexels-photo-94420.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        title: "Malaysia",
+        subTitle: "Malaysia is great place to visit.",
+        price: 290,
+        rating: 2.8
+    },
+    {
+        image: "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        title: "Indonesia",
+        subTitle: "Indonesia is great place to visit.",
+        price: 310,
+        rating: 3.9
+    },
+    {
+        image: "https://images.pexels.com/photos/290386/pexels-photo-290386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        title: "United States",
+        subTitle: "United States is great place to visit.",
+        price: 460,
+        rating: 4.0
+    },
+    {
+        image: "https://images.pexels.com/photos/2915957/pexels-photo-2915957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        title: "China",
+        subTitle: "China is great place to visit.",
+        price: 270,
+        rating: 3.4
     },
 ]
 
@@ -159,16 +201,17 @@ function createPackage() {
         let title = document.createElement('h3');
         let subTitle = document.createElement('p');
         let price = document.createElement('p');
-        let rating = document.createElement('p');
+        let rating = document.createElement('div');
         let button = document.createElement('button');
 
         image.src = package.image;
         image.alt = package.title;
         title.textContent = package.title;
         subTitle.textContent = package.subTitle;
-        price.textContent = `Price - $${package.price}`;
-        rating.textContent = `Rating - ${package.rating}`;
+        price.innerHTML = `$${package.price}`;
         button.textContent = 'Book';
+        rating.style.marginBlock = '5px';
+        price.classList.add('price');
 
         packageCard.classList.add('package-card');
         packageCardContent.classList.add('card-content');
@@ -176,6 +219,26 @@ function createPackage() {
         packageCardContent.appendChild(subTitle);
         packageCardContent.appendChild(price);
         packageCardContent.appendChild(rating);
+
+        let stars = 5;
+        for(let i=1; i<=Math.round(package.rating); i++) {
+            let starIcon = document.createElement('i');
+            starIcon.style.color = '#E5BD46';
+            starIcon.style.paddingInline = '1px';
+            starIcon.classList.add('bi');
+            starIcon.classList.add('bi-star-fill');
+            rating.appendChild(starIcon);
+            stars -=1;
+        }
+        for(let i=1; i<=stars; i++) {
+            let starIcon = document.createElement('i');
+            starIcon.style.color = '#BFBFBF'
+            starIcon.style.paddingInline = '1px';
+            starIcon.classList.add('bi');
+            starIcon.classList.add('bi-star-fill');
+            rating.appendChild(starIcon);
+        }
+
         packageCardContent.appendChild(button);
         button.classList.add('btn');
         button.classList.add('btn-warning');
